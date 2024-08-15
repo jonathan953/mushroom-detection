@@ -51,14 +51,14 @@ Os modelos foram avaliados utilizando métricas como acurácia, e foi realizada 
 Para executar este projeto localmente, siga os passos abaixo:
 
 1. Clone o repositório:
-   ```bash
+```bash
    git clone https://github.com/seu-usuario/mushroom-detection.git
 ```
 
-2. Navegue até o diretório do projeto:
-  ```bash
+2. Navegue até o diretório do projeto
+```bash
   cd mushroom-detection
-
+```
 
 3. Instale as dependências necessárias
 ```bash
