@@ -50,8 +50,8 @@ Os modelos foram avaliados utilizando métricas como acurácia, e foi realizada 
 
 - **Melhor acurácia com Árvore de Decisão**: 1.0
 - **Melhor acurácia com Random Forest**: 1.0
-- **Melhor acurácia com KNN**: 0.99
-- **Melhor acurácia com Regressão Logística**: 0.87
+- **Melhor acurácia com KNN**: 0.999
+- **Melhor acurácia com Regressão Logística**: 0.876
 - **Melhor acurácia com SVM**: 0.995
 - **Melhor acurácia com Redes Neurais**: 1.0
 
