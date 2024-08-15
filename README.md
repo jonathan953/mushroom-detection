@@ -16,6 +16,7 @@ A estrutura do projeto está organizada em pastas para facilitar a navegação e
 │   ├── EDA.ipynb                       # Análise Exploratória de Dados e tratamento inicial
 │   ├── data_preprocessing.ipynb        # Pré-processamento e modelagem dos dados
 └── README.md                           # Este arquivo
+```
 
 ## 📊 Análise Exploratória de Dados (EDA)
 O notebook `EDA.ipynb` abrange:
@@ -52,15 +53,17 @@ Para executar este projeto localmente, siga os passos abaixo:
 1. Clone o repositório:
    ```bash
    git clone https://github.com/seu-usuario/mushroom-detection.git
+```
 
 2. Navegue até o diretório do projeto:
   ```bash
   cd mushroom-detection
+```
 
 3. Instale as dependências necessárias
 ```bash
 pip install -r requirements.txt
-
+```
 4. Execute os notebooks na sequência EDA.ipynb e data_preprocessing.ipynb para replicar a análise e os resultados.
 
 ## 📝 Licença
