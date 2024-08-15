@@ -54,12 +54,12 @@ Para executar este projeto localmente, siga os passos abaixo:
    ```bash
    git clone https://github.com/seu-usuario/mushroom-detection.git
 ```
-```
+
 2. Navegue até o diretório do projeto:
   ```bash
   cd mushroom-detection
-```
-```
+
+
 3. Instale as dependências necessárias
 ```bash
 pip install -r requirements.txt
