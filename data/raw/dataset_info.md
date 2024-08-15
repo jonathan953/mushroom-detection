@@ -38,7 +38,6 @@ Este conjunto de dados inclui descrições de amostras hipotéticas corresponden
 ## Detalhes do Conjunto de Dados
 - **Número de Instâncias**: 8124
 - **Número de Atributos**: 22 (todos nominais)
-- **Valores de Atributos Faltantes**: Sim (atributo raiz do caule tem 2480 valores ausentes)
 
 ## Artigos Relevantes
 - Efeitos Detrimentais de Cursos Repetidos de Cortisona em Camundongos, Smith, M.J., (1978)
