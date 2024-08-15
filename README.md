@@ -80,7 +80,7 @@ pip install -r requirements.txt
 
 ## 📝 Licença
 Este projeto está licenciado sob os termos do Repositório de Aprendizado de Máquina da UCI. Consulte o arquivo `dataset_info.md` para mais detalhes.
-
+Este projeto é distribuído sob a licença [MIT](LICENSE).
 
 ## 🤝 Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
