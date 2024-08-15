@@ -2,5 +2,5 @@ pandas
 matplotlib
 seaborn
 joblib
-KNeighborsClassifier
-accuracy_score
+scikit-learn
+numpy

@@ -16,7 +16,8 @@ A estrutura do projeto está organizada em pastas para facilitar a navegação e
 ├── notebooks/
 │   ├── EDA.ipynb                       # Análise Exploratória de Dados e tratamento inicial
 │   ├── data_preprocessing.ipynb        # Pré-processamento e modelagem dos dados
-└── README.md                           # Este arquivo
+├── README.md                           # Este arquivo
+└── requirements.txt                    # Lista de dependências para o projeto de Detecção de Cogumelos
 ```
 
 
