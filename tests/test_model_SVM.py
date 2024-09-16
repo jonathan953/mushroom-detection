@@ -36,16 +36,22 @@ class TestMushroomDetection(unittest.TestCase):
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
             self.X, self.y, test_size=0.2, random_state=42  # random_state garante a reprodutibilidade
         )
+        
+        # Criar e treinar o modelo SVM com os melhores hiperparâmetros encontrados
+        self.model_svm = SVC(C=1.0, kernel='rbf', tol=0.001)
+        self.model_svm.fit(self.X_train, self.y_train)
     
     def test_svm_accuracy(self):
         # Testa o modelo SVM e verifica sua acurácia
-        model = SVC()  # Cria uma instância do modelo SVM
-        model.fit(self.X_train, self.y_train)  # Treina o modelo com os dados de treino
-        predictions = model.predict(self.X_test)  # Faz previsões no conjunto de teste
-        accuracy = accuracy_score(self.y_test, predictions)  # Calcula a acurácia das previsões
+        try:
+            predictions = self.model_svm.predict(self.X_test)  # Faz previsões no conjunto de teste
+            accuracy = accuracy_score(self.y_test, predictions)  # Calcula a acurácia das previsões
 
-        # Verifica se a acurácia é maior ou igual a 80%. Se não, o teste falha.
-        self.assertGreaterEqual(accuracy, 0.8, "Acurácia do SVM é inferior ao esperado.")
+            # Verifica se a acurácia é maior ou igual a 90%. Se não, o teste falha.
+            self.assertGreaterEqual(accuracy, 0.9, "Acurácia do SVM é inferior ao esperado.")
+        except Exception as e:
+            # Se houver qualquer erro durante a previsão, o teste falha
+            self.fail(f"Falha ao fazer previsões ou calcular acurácia: {e}")
 
     def test_data_integrity(self):
         # Verifica se os dados foram carregados corretamente
@@ -55,12 +61,12 @@ class TestMushroomDetection(unittest.TestCase):
 
     def test_model_loading(self):
         # Verifica se o modelo salvo pode ser carregado corretamente
-        model_path = './data/model/modelos.pkl'  # Caminho para o arquivo do modelo salvo
+        model_path = './data/model/modelo_svm.pkl'  # Caminho para o arquivo do modelo salvo
         if os.path.exists(model_path):
             try:
                 # Carrega o modelo SVM salvo
-                model = joblib.load(model_path)
-                self.assertIsNotNone(model, "O modelo SVM não foi carregado corretamente.")
+                model_svm = joblib.load(model_path)
+                self.assertIsNotNone(model_svm, "O modelo SVM não foi carregado corretamente.")
             except Exception as e:
                 # Se houver erro ao carregar o modelo, o teste falha
                 self.fail(f"Falha ao carregar o modelo: {e}")
