@@ -118,12 +118,14 @@ A variância do **SVM** foi de **1.275214e-06**, um valor que indica um controle
 O coeficiente de variação do **SVM** foi **0.0383%**, demonstrando um controle razoável de variação no desempenho. Ele foi mais elevado que os da **Decision Tree** (0.0045%) e da **Random Forest** (0.0049%), mas ainda eficiente, sendo superior em precisão.
 
 ### 3. Teste de Normalidade dos Resíduos (Shapiro-Wilk)
-O p-value do **SVM** no teste de **Shapiro-Wilk** foi **0.3161**, sugerindo que os resíduos do modelo se aproximam de uma distribuição normal. Isso é um bom indicador da robustez e adequação do modelo aos dados.
+O p-value do **SVM** no teste de **Shapiro-Wilk** foi **0.2865**, sugerindo que os resíduos do modelo se aproximam de uma distribuição normal. Isso é um bom indicador da robustez e adequação do modelo aos dados.
 
 #### Comparação com outros modelos:
-- **Decision Tree** e **Random Forest** apresentaram p-values altos (**1.0** e **4.4017**, respectivamente), indicando que seus resíduos estão longe da normalidade, possivelmente devido ao overfitting.
-- **Neural Networks** apresentou um p-value muito baixo (**0.0014**), o que, embora mostre boa acurácia, sugere problemas de normalidade dos resíduos.
-- **K-Nearest Neighbors (KNN)** também teve resíduos longe da normalidade (p-value de **3.8155**), o que indica que o modelo pode não estar capturando bem os padrões subjacentes.
+- **Árvore de Decisão** e **Random Forest** apresentaram p-values muito baixos (**4.2396e-11** e **4.2432e-11**, respectivamente), indicando que seus resíduos estão muito distantes da normalidade, possivelmente devido ao overfitting.
+- **Neural Networks** apresentou um p-value muito baixo (**0.0001**), o que, embora mostre boa acurácia, sugere problemas significativos de normalidade dos resíduos.
+- **K-Nearest Neighbors (KNN)** também teve resíduos distantes da normalidade (p-value de **1.3457e-08**), o que indica que o modelo pode não estar capturando bem os padrões subjacentes.
+- **Regressão Logística** teve um p-value de **0.1699**, indicando que os resíduos estão razoavelmente próximos da normalidade.
+
 
 ### 4. Flexibilidade com Hiperparâmetros
 O **SVM** se beneficiou da flexibilidade no ajuste de hiperparâmetros como **C** (regularização) e o tipo de **kernel**. Esses ajustes permitiram ao modelo equilibrar precisão e generalização, sendo uma excelente escolha para dados com padrões não lineares, como no caso dos cogumelos.
@@ -138,13 +140,14 @@ O **SVM** se beneficiou da flexibilidade no ajuste de hiperparâmetros como **C*
 ## 🥈 Melhor Alternativa: Logistic Regression
 
 ### 1. Baixa Variância e Alta Estabilidade
-A **Logistic Regression** destacou-se pela menor variância entre todos os modelos, com um valor de **4.583502e-12** e o menor coeficiente de variação de **0.000208%**. Isso indica que o modelo é extremamente estável em suas previsões, sendo uma excelente escolha para cenários onde simplicidade e estabilidade são mais importantes que a capacidade de capturar padrões complexos ou não lineares.
+A **Logistic Regression** destacou-se pela menor variância entre todos os modelos, com um valor de **4.583502e-12**. Isso indica que o modelo é extremamente estável em suas previsões, sendo uma excelente escolha para cenários onde simplicidade e estabilidade são mais importantes que a capacidade de capturar padrões complexos ou não lineares.
 
 ### 2. Normalidade dos Resíduos
-No teste de **Shapiro-Wilk**, a **Logistic Regression** apresentou um p-value de **0.6069**, indicando que seus resíduos estão próximos da normalidade. Isso demonstra que, apesar de sua simplicidade, o modelo é robusto e bem ajustado aos dados.
+No teste de **Shapiro-Wilk**, a **Logistic Regression** apresentou um p-value de **0.1699**, indicando que seus resíduos estão próximos da normalidade. Isso demonstra que, apesar de sua simplicidade, o modelo é robusto e bem ajustado aos dados.
 
 ### 3. Limitação em Dados Não Lineares
 O desempenho inferior da **Logistic Regression** em relação ao **SVM** pode ser explicado por sua limitação ao lidar com dados não lineares. Como o conjunto de dados de cogumelos contém variáveis com interações mais complexas, o **SVM** (com seu kernel RBF) consegue capturar essas relações não lineares com maior eficácia.
+
 
 ---
 
