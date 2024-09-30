@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mushroom-detection:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+    environment:
+      - ENV=development
+    command: jupyter notebook --ip=0.0.0.0 --allow-root --no-browser
