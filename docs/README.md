@@ -11,20 +11,24 @@ Este projeto realiza a classificação de cogumelos como comestíveis ou venenos
 A estrutura do projeto está organizada em pastas para facilitar a navegação e entendimento:
 
 ```bash
+├── .vscode/
+│   └── extensions.json                # Recomendação de extensões para o projeto
 ├── data/
+│   ├── model/
+│   │   └── modelo_svm.pkl              # Modelo SVM já treinado
 │   ├── processed/
 │   │   └── dados_processados.pkl       # Dados já processados e prontos para modelagem
 │   ├── raw/
 │   │   └── dataset_info.md             # Informações detalhadas sobre o conjunto de dados
-│   ├── model/
-│   │   └── modelo_svm.pkl              # Modelo SVM já treinado
+├── docs/
+│   ├── LICENSE                         # Licença do projeto
+│   ├── README.md                       # Este arquivo
 ├── notebooks/
 │   ├── EDA.ipynb                       # Análise Exploratória de Dados e tratamento inicial
 │   ├── data_preprocessing.ipynb        # Pré-processamento e modelagem dos dados
 ├── tests/                              # Testes unitários
 │   └── test_model_SVM.py               # Arquivo de testes unitários para validação do código
-├── LICENSE                             # Licença do projeto
-├── README.md                           # Este arquivo
+├── .gitignore                          # Ignora alguns downloads ao baixar o projeto
 └── requirements.txt                    # Lista de dependências para o projeto de Detecção de Cogumelos
 ```
 
